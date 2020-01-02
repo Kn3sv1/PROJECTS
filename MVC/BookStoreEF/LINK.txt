@@ -1,0 +1,7 @@
+part 2:
+https://code-maze.com/working-with-data-in-asp-net-core-mvc/
+
+*PM > Add-Migration BookStore.Models.BookStoreContext
+
+
+https://code-maze.com/getting-started-with-asp-net-core-mvc/
