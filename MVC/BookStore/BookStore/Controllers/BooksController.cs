@@ -28,5 +28,22 @@ namespace BookStore.Controllers
 
             return View(book);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                // Logic to add the book to DB
+                return RedirectToAction("Index");
+            }
+            return View(book);
+        }
     }
 }
