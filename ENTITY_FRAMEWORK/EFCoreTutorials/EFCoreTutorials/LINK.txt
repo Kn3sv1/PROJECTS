@@ -8,3 +8,12 @@ PM> Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 2.
 
 NOT COMPATIBLE:
 PM> Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design 
+
+
+
+
+PM> Add-Migration AddGradeOneToMany
+To undo this action, use Remove-Migration
+
+PM> Remove-Migration
+PM> Update-Database
