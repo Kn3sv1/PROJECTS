@@ -15,6 +15,12 @@ namespace EFCoreTutorials
                                             .ToList();
 
             studentsWithSameName.ForEach(e => Console.WriteLine($"{e.Name} GRADE: {e.Grade.GradeName}"));
+
+            //https://www.entityframeworktutorial.net/efcore/raw-sql-queries-in-ef-core.aspx
+            var students = context.Students
+                  .FromSql("Select * from Students where Name = 'Bill'")
+                  .ToList();
+            students.ForEach(s => Console.WriteLine(s.Name));
         }
 
         public static string GetName()
